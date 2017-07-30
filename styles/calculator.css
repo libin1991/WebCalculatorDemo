@@ -1,0 +1,17 @@
+table{
+    width: 100%;
+}
+.import{
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
+#output{
+    height: 100px;
+    width: 380px;
+    font-size: 45px;
+    text-align: right;
+    font-weight: bold;
+    cursor: auto;
+    padding: 0 10px;
+}
