@@ -8,7 +8,7 @@ This is my first JS project, is a simple calculator, the latter will be a variet
 * 后期会不定期逐步增加功能或美化外观
 
 ## 效果
-![效果](http://ww1.sinaimg.cn/large/7b6c9535ly1fi2c0c2izxg20er0h9x6s.gif)
+![效果](http://ww1.sinaimg.cn/large/7b6c9535ly1fi2c2bh5c3g209u0bie83.gif)
 
 ## 我的个人博客
 **[刘志宇的新天地](http://barryliu1995.studio/)**
