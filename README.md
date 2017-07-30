@@ -7,5 +7,8 @@ This is my first JS project, is a simple calculator, the latter will be a variet
 * `calculate.js`是最早的计算器业务逻辑代码，因扩展性、复用性、可维护性较低，后重构代码写了`calculatorSimpleFactoryMode.js`这份新的业务代码，改善了扩展性，复用性和可维护性
 * 后期会不定期逐步增加功能或美化外观
 
+## 效果
+![效果](http://ww1.sinaimg.cn/large/7b6c9535ly1fi2c0c2izxg20er0h9x6s.gif)
+
 ## 我的个人博客
 **[刘志宇的新天地](http://barryliu1995.studio/)**
