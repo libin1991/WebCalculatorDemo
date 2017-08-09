@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器demo</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #AFAFAF;
+            font: 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #total {
+            width: 100%;
+            height: 100%;
+            min-width: 300px;
+            max-width: 640px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #333;
+            box-shadow: 0px 0px 5px 2px #555555;
+        }
+
+        header {
+            width: 100%;
+            height: 25%;
+            box-sizing: border-box;
+            /*border-bottom: 1px solid #000;*/
+            /*box-shadow: 0 0 10px #000 inset,0 0 15px #333;*/
+        }
+
+        header input {
+            display: block;
+            color: #fff;
+            text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+            height: 50%;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            font-size: 45px;
+            font-weight: bolder;
+            text-align: right;
+            margin: 0 -2%;
+        }
+
+        main {
+            width: 100%;
+            height: 75%;
+        }
+
+        main ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        main ul li {
+            width: 25%;
+            height: 20%;
+            float: left;
+            color: #fff;
+            font-size: 26px;
+            text-align: center;
+            border-left: 1px solid #000;
+            border-top: 1px solid #000;
+            box-sizing: border-box;
+            /*text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);*/
+        }
+
+        main ul li:before {
+            display: inline-block;
+            content: "";
+            height:100%;
+            vertical-align:middle;
+        }
+
+        .sign{
+            background-color: #f5923e;
+        }
+        .FC{
+            border-left: 1px solid transparent;
+        }
+    </style>
+</head>
+<body>
+<div id="total">
+    <header>
+        <input type="text" id="sum" value="" readonly>
+        <input type="text" id="content" value="0" readonly>
+    </header>
+    <main>
+        <ul id="list">
+            <li class="sign FC" onclick="Main.onreset()">AC</li>
+            <li class="sign" onclick="Main.inClick('d')">&larr;</li>
+            <li class="sign" onclick="compute('%')">mod</li>
+            <li class="sign" onclick="compute('+')">+</li>
+            <li class="num FC" onclick="Main.inClick(7)">7</li>
+            <li class="num" onclick="Main.inClick(8)">8</li>
+            <li class="num" onclick="Main.inClick(9)">9</li>
+            <li class="sign" onclick="compute('-')">-</li>
+            <li class="num FC" onclick="Main.inClick(4)">4</li>
+            <li class="num" onclick="Main.inClick(5)">5</li>
+            <li class="num" onclick="Main.inClick(6)">6</li>
+            <li class="sign" onclick="compute('X')">&times;</li>
+            <li class="num FC" onclick="Main.inClick(1)">1</li>
+            <li class="num" onclick="Main.inClick(2)">2</li>
+            <li class="num" onclick="Main.inClick(3)">3</li>
+            <li class="sign" onclick="compute('/')">&divide;</li>
+            <li class="num FC" onclick="Main.inClick('.')">.</li>
+            <li class="num" onclick="Main.inClick(0)">0</li>
+            <li class="num" onclick="Main.inClick('PI')">PI</li>   <!--Math.PI-->
+            <li class="sign" onclick="Main.display()">=</li>
+
+            <!--<li class="sign" onclick="compute('^')">x&sup3;</li>-->
+            <!--<li class="sign" onclick="compute('#')">&radic;</li>-->
+            <!--<li class="sign" onclick="compute('sin')">sin</li>-->
+            <!--<li class="sign" onclick="compute('cos')">cos</li>-->
+        </ul>
+    </main>
+</div>
+<script src="scripts/OperationTypeFactory.js"></script>
+<script src="scripts/SimpleCalculatorIndex.js"></script>
+</body>
+</html>
