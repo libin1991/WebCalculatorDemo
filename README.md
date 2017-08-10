@@ -22,10 +22,15 @@ This is my first JS project, is a simple calculator, the latter will be a variet
 ![支持小数点和负数运算](http://ww1.sinaimg.cn/large/7b6c9535gy1fiddj6nzaxg20rs0e8npe.gif)
 
 1. 支持小数点、负数运算
-2. 提供 $\pi$ 数值
+2. 提供 $ \pi $数值
 3. 提供一键清除运算过程和退位
 4. 支持显示运算表达式
 
+
+## TO-DO
+
+1. 增加科学计算界面
+2. 增加多表达式计算
 
 
 ## 我的个人博客
