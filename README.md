@@ -35,6 +35,9 @@ This is my first JS project, is a simple calculator, the latter will be a variet
 - [ ] 运算结果最多显示10位有效数学
 - [ ] 运算符号显示修正
 
+## 在线预览
+[WebCalculatorDemo](http://barryliu1995.studio/WebCalculatorDemo/index.html)
+
 
 ## 我的个人博客
 **[刘志宇的新天地](http://barryliu1995.studio/)**
