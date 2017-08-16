@@ -20,6 +20,8 @@ var Main = {
     deleteTemp: 0,                                  //永久保存存入Operation.first的temp值
     deleteCount: 0,                                 //永久保存存入Operation.first的count值
     deleteDotAddress: -1,                           //永久保存存入Operation.first的dotAddress值
+
+    //inClick 函数接受计算器的数字输入
     inClick: function (number) {
         if (number === 'd') {
             var last = this.formula.charAt(this.formula.length - 1);
@@ -34,7 +36,7 @@ var Main = {
                         this.addCount--;
                         this.isFirst = true;
                         this.temp = this.deleteTemp;
-                        this.count=this.deleteCount;
+                        this.count = this.deleteCount;
                         this.dotAddress = this.deleteDotAddress;
                         break;
                     case '-':
@@ -42,7 +44,7 @@ var Main = {
                         if (fl === this.dotLocation + 1) {
                             this.isFirst = true;
                             this.temp = this.deleteTemp;
-                            this.count=this.deleteCount;
+                            this.count = this.deleteCount;
                             this.dotAddress = this.deleteDotAddress;
                         }
                         break;
@@ -50,21 +52,21 @@ var Main = {
                         this.multiCount--;
                         this.isFirst = true;
                         this.temp = this.deleteTemp;
-                        this.count=this.deleteCount;
+                        this.count = this.deleteCount;
                         this.dotAddress = this.deleteDotAddress;
                         break;
                     case '/':
                         this.divCount--;
                         this.isFirst = true;
                         this.temp = this.deleteTemp;
-                        this.count=this.deleteCount;
+                        this.count = this.deleteCount;
                         this.dotAddress = this.deleteDotAddress;
                         break;
                     case '%':
                         this.modCount--;
                         this.isFirst = true;
                         this.temp = this.deleteTemp;
-                        this.count=this.deleteCount;
+                        this.count = this.deleteCount;
                         this.dotAddress = this.deleteDotAddress;
                         break;
                 }
@@ -128,6 +130,7 @@ var Main = {
         }
     },
 
+    //该函数接受运算符号的输入
     getOperation: function (math) {
         //如果Operation.first是小数的话，在输入运算符号之前进行小数化
         if (this.dotFlag) {
@@ -160,6 +163,8 @@ var Main = {
                 Main.modCount++;
                 break;
         }
+
+        //根据传入的运算符号进行输入环境的切换
         if (math === '+' || math === 'X' || math === '%' || math === '^' || math === '/') {
             this.isFirst = !this.isFirst;
         } else if (math === '-') {
@@ -173,6 +178,8 @@ var Main = {
         this.temp = 0;
         this.dotAddress = -1;
     },
+
+    //该函数负责运算结果的计算以及显示
     display: function () {
         //如果第二个运算数为小数的话，在此进行小数化
         if (this.dotFlag) {
